@@ -1,0 +1,62 @@
+server:
+  port: 9000
+  # 后台调用服务出现异常时是否返回堆栈信息
+  error:
+    include-stacktrace: always
+  servlet:
+    application-display-name: plus
+    context-path: /plus
+
+spring:
+  profiles:
+    include: devdb,cloud
+  application:
+    name: ${server.servlet.application-display-name}
+  main: 
+    allow-bean-definition-overriding: true
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
+    date-format: yyyy-MM-dd HH:mm:ss
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+#上传文件的大小设置
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+#  cache:
+#    cache-names: chche1,cache2
+#    redis:
+#      time: 6000s
+    
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    jdbc-type-for-null: null
+    call-setters-on-nulls: true
+  mapper-locations: classpath*:/mapper/plus/**/*Mapper.xml
+
+
+conf:
+  address:
+    demo: http://localhost:8091
+  path: D:\bwbd2
+  misc-relative-path: \Files\misc\
+  auto-task: false
+
+logging:
+  level:
+    root: info
+  config: classpath:logback.xml
+
+
+
+
+
+
+
+  
