@@ -71,6 +71,5 @@ public class LogController {
             ExcelUtil.writeExcel(response, sysLogDTOList, key, "sheet1", new SysLogDTO());
         }
     }
-
 }
 

@@ -4,6 +4,7 @@ import cn.hutool.http.ContentType;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 
+import com.mybatis.plus.config.exception.RRException;
 import com.mybatis.plus.config.redis.RedisService;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
