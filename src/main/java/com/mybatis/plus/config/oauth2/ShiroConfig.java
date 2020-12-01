@@ -58,6 +58,7 @@ public class ShiroConfig {
         Map<String, String> filterMap = new LinkedHashMap<>();
         filterMap.put("/webjars/**", "anon");
         filterMap.put("/druid/**", "anon");
+        filterMap.put("/actuator/**", "anon");
         filterMap.put("/login", "anon");
         filterMap.put("/log", "anon");
         filterMap.put("/test/**", "anon");

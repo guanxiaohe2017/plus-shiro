@@ -42,8 +42,7 @@ mybatis-plus:
 
 
 conf:
-  address:
-    demo: http://localhost:8091
+  address-demo: http://localhost:8091
   path: D:\bwbd2
   misc-relative-path: \Files\misc\
   auto-task: false
@@ -52,6 +51,13 @@ logging:
   level:
     root: info
   config: classpath:logback.xml
+
+# 配置 actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, beans, env, metrics
 
 
 

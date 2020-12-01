@@ -228,6 +228,12 @@
             <version>2.8.5</version>
         </dependency>
 
+        <!--引入 actuator-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>

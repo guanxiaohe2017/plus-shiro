@@ -2,6 +2,8 @@
 
 package com.mybatis.plus.config.exception;
 
+import cn.hutool.core.util.StrUtil;
+
 /**
  *
  * 描述: 自定义异常
@@ -23,6 +25,11 @@ public class RRException extends RuntimeException {
 	public RRException(String msg, Throwable e) {
 		super(msg, e);
 		this.msg = msg;
+	}
+
+	public static RRException MyException(String msg, Object... args){
+		String format = StrUtil.format(msg, args);
+		return new RRException(format);
 	}
 
 	public RRException(String msg, int code) {
